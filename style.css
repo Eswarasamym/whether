@@ -1,43 +1,49 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
+body,
+html {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
-.container {
-  text-align: center;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
-input {
-  padding: 10px;
-  margin: 10px 0;
-  width: 80%;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+#backgroundVideo {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: url("placeholder.jpg") no-repeat;
+  background-size: cover;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
+.suggestions {
+  align-items: center;
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 1000;
+}
+
+.suggestions li {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
-
-#weatherResult {
-  margin-top: 20px;
-  font-size: 1.2em;
+.suggestions li:hover {
+  background-color: #f8f9fa;
 }
