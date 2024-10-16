@@ -5,6 +5,7 @@ html {
   height: 100%;
   overflow: hidden;
   font-family: Arial, sans-serif;
+  font-style: italic;
 }
 
 .video-container {
@@ -46,4 +47,19 @@ html {
 
 .suggestions li:hover {
   background-color: #f8f9fa;
+}
+.btn btn-primary mt-3 {
+  align-items: center;
+}
+h1 {
+  --animate-duration: 2s;
+}
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+.btn btn-primary mt-3 {
+  text-align: center;
 }
